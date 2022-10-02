@@ -550,7 +550,7 @@ h3 {
 
 .skill__card-header h3 {
     color: var(--primary-color-2) !important;
-    font-weight: var(--font-reguler);
+    font-size: 1.3rem;
 }
 
 .skill__item-container {
@@ -616,13 +616,24 @@ h3 {
     width: 50%;
 }
 
+.skill__list {
+    transition: .5s all;
+}
+
 .skill__close .skill__list {
     height: 0;
     overflow: hidden;
+    transform: translateY(-10%)
 }
 
 .skill__open .skill__list {
     height: max-content;
+    transform: translateY(0)
+}
+
+.skill__open .skill__arrow {
+    transition: .5s all;
+    transform: rotate(-180deg)
 }
 
 
