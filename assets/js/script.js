@@ -8,7 +8,7 @@ const header = document.getElementById('header');
 
 
 
-// function untuk memunculkan menu
+// handler menu show
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('open');
@@ -20,7 +20,6 @@ if (navToggle) {
     })
 }
 
-// Mengambil id pada setiap link
 const navLink = document.querySelectorAll('#nav-link');
 
 function linkAction() {
@@ -51,22 +50,29 @@ function secrollActive() {
         }
     })
 }
-window.addEventListener('scroll', secrollActive)
+window.addEventListener('scroll', secrollActive);
 
+
+
+// handler card skill show
+const skillCardHeader = document.querySelectorAll('.skill__card-header');
+const skillCard = document.getElementsByClassName('skill__card');
 
 
 function toggleSkill() {
+
     let itemClass = this.parentNode.className
 
-    for (i = 0; i < skillCard.length; i++) {
+    for (let i = 0; i < skillCard.length; i++) {
+
         skillCard[i].className = 'skill__card skill__close';
+
     }
 
-    if (itemClass === 'skill__card skill__close') {
-        this.parentNode.className = 'skill__card skill__open'
-    }
+    if (itemClass === 'skill__card skill__close') return this.parentNode.className = 'skill__card skill__open';
+
 }
 
-skillCardData.forEach((el) => {
-    el.addEventListener('click', toggleSkill)
+skillCardHeader.forEach(card => {
+    card.addEventListener('click', toggleSkill)
 })
