@@ -8,12 +8,14 @@
     --header-height: 70px;
     /* color */
     /* https://www.w3schools.com/colors/colors_picker.asp?colorhex=060222 */
+    /* https://colors.dopely.top/colors */
     /*Color mode HSL*/
     --color-hue: 120;
     --primary-color: hsl(var(--color-hue), 76%, 0%);
     --primary-color-1: hsl(var(--color-hue), 76%, 10%);
     --primary-color-2: hsl(var(--color-hue), 76%, 40%);
-    --primary-color-3: hsl(var(--color-hue), 76%, 100%);
+    --primary-color-3: hsl(var(--color-hue), 76%, 97%);
+    --primary-color-4: hsl(var(--color-hue), 76%, 100%);
     --title-color: var(--primary-color);
     --text-color: var(--primary-color-1);
     /* Font and typography*/
@@ -99,7 +101,7 @@ html {
 body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: var(--primary-color-three);
+    background-color: var(--primary-color-4);
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -145,7 +147,7 @@ h3 {
     padding: 10px 21px;
     text-align: center;
     text-transform: none;
-    transition: color .13s ease-in-out, background .13s ease-in-out, opacity .13s ease-in-out, box-shadow .13s ease-in-out;
+    transition: color .13s ease-in-out;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
@@ -173,6 +175,13 @@ h3 {
 
 .card__header-title {
     font-size: var(--m-1-5);
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card__body-title {
@@ -634,6 +643,38 @@ h3 {
 .skill__open .skill__arrow {
     transition: .5s all;
     transform: rotate(-180deg)
+}
+
+
+/* ====================================== Styling Service ============================== */
+
+.service__card {
+    margin: 10px;
+}
+
+.service__card-body {
+    border-radius: 5px;
+    padding: var(--m-2);
+    background-color: var(--primary-color-3);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.service__card-body h3 {
+    color: var(--primary-color-2);
+}
+
+.service__card-body:hover {
+    background-color: var(--primary-color);
+}
+
+.sevices__img {
+    width: 8rem;
+    height: max-content;
+    background-color: var(--primary-color-2);
+    border-radius: 5px;
+    color: var(--primary-color-2) !important;
+    padding: var(--m-1);
 }
 
 
