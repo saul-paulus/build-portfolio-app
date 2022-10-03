@@ -330,6 +330,12 @@ h3 {
 
 .nav__link:hover::after {
     transform: scaleX(1);
+    background-color: var(--primary-color-4);
+    color: var(--primary-color-4);
+}
+
+.nav__link:hover {
+    color: var(--primary-color-4);
 }
 
 
@@ -871,12 +877,12 @@ h3 {
 @media (min-width: 1400px) {
     /* Base */
      :root {
-        --h1-font-size: 2.5rem;
-        --h2-font-size: 2.1rem;
-        --h3-font-size: 1.55rem;
-        --bigt-font-size: 3.634rem;
-        --normal-font-size: 1.338rem;
-        --small-font-size: 1.213rem;
+        --h1-font-size: 2.3rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.3rem;
+        --bigt-font-size: 3.44rem;
+        --normal-font-size: 1.23rem;
+        --small-font-size: 1.113rem;
         --smaller-font-size: 1.05rem;
     }
     .container__margin {
