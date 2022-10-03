@@ -8,6 +8,8 @@ https://www.softr.io/tools/svg-shape-generator
 https://app.haikei.app/
 https://undraw.co/search
 http://rivolicons.hadrien.co/free/
+https://thenounproject.com/icon/front-end-2259025/ icon free
+
 */
 
 
@@ -22,7 +24,7 @@ http://rivolicons.hadrien.co/free/
     --color-hue: 120;
     --primary-color: hsl(var(--color-hue), 76%, 0%);
     --primary-color-1: hsl(var(--color-hue), 76%, 10%);
-    --primary-color-2: hsl(var(--color-hue), 76%, 40%);
+    --primary-color-2: hsl(var(--color-hue), 76%, 33%);
     --primary-color-3: hsl(var(--color-hue), 76%, 97%);
     --primary-color-4: hsl(var(--color-hue), 76%, 100%);
     --title-color: var(--primary-color);
@@ -647,7 +649,7 @@ h3 {
 .skill__close .skill__list {
     height: 0;
     overflow: hidden;
-    transform: translateY(-10%)
+    transform: translateY(-10%);
 }
 
 .skill__open .skill__list {
@@ -671,7 +673,7 @@ h3 {
     height: 18rem;
     perspective: 1000px;
     overflow: hidden;
-    background-color: var(--primary-color-3);
+    background-color: var(--primary-color-4);
     cursor: pointer;
 }
 
@@ -684,6 +686,7 @@ h3 {
 .service__img {
     width: 100%;
     transition: .6s all;
+    color: var(--primary-color-2);
 }
 
 .service__card:hover .service__img {
@@ -692,6 +695,7 @@ h3 {
 
 .service__card:hover .service__card-description {
     transform: translateY(0);
+    color: var(--primary-color-1);
 }
 
 .service__card-description {

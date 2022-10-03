@@ -1,3 +1,5 @@
+// Swiperjs.com untuk slide 
+
 // Mengatifkan untuk fungsi open menu dan close menu 
 
 const navMenu = document.getElementById('nav-menu');
@@ -65,11 +67,11 @@ function toggleSkill() {
 
     for (let i = 0; i < skillCard.length; i++) {
 
-        skillCard[i].className = 'skill__card skill__close';
+        skillCard[i].className = 'card skill__card skill__close';
 
     }
 
-    if (itemClass === 'skill__card skill__close') return this.parentNode.className = 'skill__card skill__open';
+    if (itemClass === 'card skill__card skill__close') return this.parentNode.className = 'card skill__card skill__open';
 
 }
 
