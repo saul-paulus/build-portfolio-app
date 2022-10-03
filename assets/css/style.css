@@ -25,10 +25,12 @@ https://thenounproject.com/icon/front-end-2259025/ icon free
     --primary-color: hsl(var(--color-hue), 76%, 0%);
     --primary-color-1: hsl(var(--color-hue), 76%, 10%);
     --primary-color-2: hsl(var(--color-hue), 76%, 33%);
-    --primary-color-3: hsl(var(--color-hue), 76%, 97%);
+    --primary-color-3: hsl(var(--color-hue), 76%, 90%);
     --primary-color-4: hsl(var(--color-hue), 76%, 100%);
     --title-color: var(--primary-color);
     --text-color: var(--primary-color-1);
+    /* Transparansi */
+    --primary-color-trans: hsl(var(--color-hue), 76%, 33%, 0.8);
     /* Font and typography*/
     /* 
         conver font:
@@ -695,7 +697,7 @@ h3 {
 
 .service__card:hover .service__card-description {
     transform: translateY(0);
-    color: var(--primary-color-1);
+    color: var(--primary-color-trans);
 }
 
 .service__card-description {
@@ -705,6 +707,55 @@ h3 {
     transform: translateY(3rem);
     transition: .6s all;
     text-align: justify;
+}
+
+
+/* ========================== Styling Portfolio ======================== */
+
+.portfolio__card {
+    position: relative;
+    width: 20rem;
+    height: 17rem;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.portfolio__card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.portfolio__card-data {
+    padding: 1.3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--primary-color-trans);
+    border-radius: 5px;
+    opacity: 0;
+    transition: .6s all;
+}
+
+.portfolio__card:hover .portfolio__card-data {
+    opacity: 1;
+}
+
+.portfolio__card-data p {
+    text-align: justify;
+    color: var(--primary-color);
+}
+
+.portfolio__card-data .button {
+    margin-top: 1.5rem;
 }
 
 
