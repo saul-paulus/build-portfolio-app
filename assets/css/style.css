@@ -2,6 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600;700&family=M+PLUS+1+Code:wght@400;500;600&family=Poppins:wght@400;500;600&family=Quicksand:wght@300;400;500;600&display=swap');
 
+/* img
+
+https://www.softr.io/tools/svg-shape-generator
+https://app.haikei.app/
+https://undraw.co/search
+http://rivolicons.hadrien.co/free/
+*/
+
+
 /* Base */
 
 :root {
@@ -229,8 +238,10 @@ h3 {
 
 .section__body {
     margin-top: var(--m-3);
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid {
@@ -544,6 +555,10 @@ h3 {
 
 /* ==========================  style skill ============================= */
 
+.skill__card {
+    width: 100%;
+}
+
 .skill__card-header {
     width: 100%;
     padding: var(--m-0-75) 0;
@@ -563,7 +578,7 @@ h3 {
 }
 
 .skill__item-container {
-    width: 95%;
+    width: 100%;
     padding-top: var(--m-1);
     transition: .3s all;
 }
@@ -650,31 +665,42 @@ h3 {
 
 .service__card {
     margin: 10px;
-}
-
-.service__card-body {
+    border: 2px solid var(--primary-color-3);
     border-radius: 5px;
-    padding: var(--m-2);
+    width: 17rem;
+    height: 18rem;
+    perspective: 1000px;
+    overflow: hidden;
     background-color: var(--primary-color-3);
     cursor: pointer;
-    transition: .3s all;
 }
 
-.service__card-body h3 {
-    color: var(--primary-color-2);
+.service__card-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.service__card-body:hover {
-    background-color: var(--primary-color);
+.service__img {
+    width: 100%;
+    transition: .6s all;
 }
 
-.sevices__img {
-    width: 8rem;
-    height: max-content;
-    background-color: var(--primary-color-2);
-    border-radius: 5px;
-    color: var(--primary-color-2) !important;
-    padding: var(--m-1);
+.service__card:hover .service__img {
+    width: 40%;
+}
+
+.service__card:hover .service__card-description {
+    transform: translateY(0);
+}
+
+.service__card-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(3rem);
+    transition: .6s all;
+    text-align: justify;
 }
 
 
