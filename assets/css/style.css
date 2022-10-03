@@ -759,6 +759,23 @@ h3 {
 }
 
 
+/* ==================== Styling Contact ====================== */
+
+.contact__option .card {
+    flex-direction: row;
+    margin: var(--m-1) 0;
+}
+
+.contact__option .card i {
+    margin-right: var(--m-1-5);
+    font-size: var(--h3-font-size);
+}
+
+.contact__option p {
+    font-size: var(--normal-font-size)
+}
+
+
 /* ============================================================================== */
 
 @media (min-width: 768px) {
