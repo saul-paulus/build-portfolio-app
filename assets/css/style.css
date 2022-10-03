@@ -24,7 +24,7 @@ https://thenounproject.com/icon/front-end-2259025/ icon free
     --color-hue: 120;
     --primary-color: hsl(var(--color-hue), 76%, 0%);
     --primary-color-1: hsl(var(--color-hue), 76%, 10%);
-    --primary-color-2: hsl(var(--color-hue), 76%, 33%);
+    --primary-color-2: hsl(var(--color-hue), 76%, 50%);
     --primary-color-3: hsl(var(--color-hue), 76%, 90%);
     --primary-color-4: hsl(var(--color-hue), 76%, 100%);
     --title-color: var(--primary-color);
@@ -206,7 +206,7 @@ h3 {
 /*style layout*/
 
 .container__margin {
-    max-width: 768px;
+    /* max-width: 768px; */
     margin-left: var(--m-1-5);
     margin-right: var(--m-1-5);
 }
@@ -296,6 +296,8 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
+    text-align: center;
 }
 
 .nav__item {
@@ -306,33 +308,26 @@ h3 {
 .nav__link {
     position: relative;
     display: inline-block;
+    margin-block: 2px;
     color: var(--primary-color-2);
     padding: 0 var(--m-2);
+    text-decoration: none;
 }
 
-.nav__link::before,
 .nav__link::after {
     content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-color-2);
+    border-radius: 4px;
     position: absolute;
     left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--title-color);
+    bottom: 0;
     transform: scaleX(0);
-    transition: transform .25s;
-}
-
-.nav__link::before {
-    top: -20x;
     transform-origin: left;
+    transition: transform .25s ease;
 }
 
-.nav__link::after {
-    bottom: -3px;
-    transform-origin: right;
-}
-
-.nav__link:hover::before,
 .nav__link:hover::after {
     transform: scaleX(1);
 }
@@ -430,6 +425,7 @@ h3 {
 .home {
     display: grid;
     grid-template-areas: 'home__socialmedia home__avatar' 'section__header section__header' 'home__contact home__contact';
+    align-self: center;
 }
 
 .home__socialmedia {
@@ -460,17 +456,21 @@ h3 {
     align-items: center;
 }
 
+.home__avatar-img {
+    width: 80%;
+}
+
 .home__skill {
     font-size: var(--small-font-size);
     background-color: var(--primary-color-2);
     color: var(--primary-color);
     padding: 1px 10px;
     border-radius: 3px;
+    margin-top: -2rem;
 }
 
 .home__header {
     grid-area: section__header;
-    align-items: flex-start;
     margin-top: var(--m-2);
 }
 
@@ -484,9 +484,10 @@ h3 {
 }
 
 .home__contact {
-    margin: 10px 0;
     grid-area: home__contact;
-    width: max-content;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
 }
 
 .link__send {
@@ -496,10 +497,7 @@ h3 {
 
 .home__contact-link {
     font-size: var(--normal-font-size);
-}
-
-.home__avatar {
-    width: 18rem;
+    width: max-content;
 }
 
 
@@ -781,7 +779,6 @@ h3 {
 
 @media (min-width: 768px) {
     .container-margin {
-        max-width: 100%;
         margin-left: var(--m-3);
         margin-right: var(--m-3);
     }
@@ -808,17 +805,65 @@ h3 {
     .section {
         padding-top: var(--m-8);
     }
+    /* Styling home */
+    .home {
+        grid-template-areas: 'home__socialmedia  section__header home__avatar' 'home__contact home__contact home__contact';
+        align-items: center;
+    }
+    .home__contact {
+        justify-content: center;
+    }
+    .home__header {
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+    .service__container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .portfolio__container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 
 /* Medium devices (tablets, less than 992px) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .container__margin {
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+    .home__avatar-img {
+        width: 100%;
+    }
+    .about__avatar-img {
+        width: 40%;
+    }
+    .skill__container {
+        flex-direction: row;
+    }
+}
 
 
 /* Large devices (desktops, less than 1200px) */
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .container__margin {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+    .home {
+        grid-template-columns: 0.5fr 1.5fr 1fr;
+    }
+    .home__header {
+        width: 100%;
+    }
+    .home__header {
+        margin-left: 0;
+    }
+}
 
 
 /* X-Large devices (large desktops, less than 1400px) */
@@ -834,8 +879,11 @@ h3 {
         --small-font-size: 1.213rem;
         --smaller-font-size: 1.05rem;
     }
-    .container-margin {
-        margin-left: 10rem;
-        margin-right: 10rem;
+    .container__margin {
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
+    .portfolio__card-data .button {
+        margin-top: 0;
     }
 }
