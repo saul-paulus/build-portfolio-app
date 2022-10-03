@@ -486,6 +486,7 @@ h3 {
 .home__contact {
     margin: 10px 0;
     grid-area: home__contact;
+    width: max-content;
 }
 
 .link__send {
